@@ -63,88 +63,32 @@
 
 <h2>Research Interests<a name="Research Interests"></a>&nbsp;&nbsp;&nbsp;<a style=" color:#9D849A; font-size:15px;" href="#top">[back top]</a></h2>
 
-    <h3>Lable-efficient 3D Detection</h3>
-<table class="pub_table">
-  <tbody>
+<p>I study how autonomous systems can learn to perceive and understand outdoor 3D scenes with fewer human annotations, observations shared across vehicles and infrastructure, and natural language descriptions.</p>
 
-    <tr>
-    <td class="pub_td1"> <img src="./imgs/DOTA.png" class="papericon"></td>
-    <td class="pub_td2"> <font color="goldenrod">Qiming xia</font>, Wenkai Lin, Haoen Xiang, Xun Huang, Siheng Chen, Zhen Dong, Cheng Wang, Chenglu Wen<sup>✉</sup>, Cheng Wang
-      <br><b> Learning to Detect Objects from Multi-Agent LiDAR Scans without Manual Labels </b>
-      <br> CVPR, 2025
-      <br> 
-    </td>
-  </tr>
-	  <tr>
-    <td class="pub_td1"> <img src="./imgs/SP3D.png" class="papericon"></td>
-    <td class="pub_td2"> Shijia Zhao*, <font color="goldenrod">Qiming xia*</font>, Wenkai Lin, Haoen Xiang, Xun Huang, Siheng Chen, Zhen Dong, Cheng Wang, Chenglu Wen<sup>✉</sup>, Cheng Wang
-      <br><b> SP3D: Boosting Sparsely-Supervised 3D Object Detection via Accurate Cross-Modal Semantic Prompts </b>
-      <br> CVPR, 2025 (Highlight)
-      <br> 
-    </td>
-  </tr>
-	  
-    <tr>
-    <td class="pub_td1"> <img src="./imgs/HINTED.jpg" class="papericon"></td>
-    <td class="pub_td2"><font color="goldenrod">Qiming xia</font>, Wei Ye, Hai Wu, Shijia Zhao, Leyuan Xin, Xun Huang, Jinhao Deng, Xin Li, Chenglu Wen<sup>✉</sup>, Cheng Wang
-      <br><b>HINTED: Hard Instance Enhanced Detector with Mixed-Density Feature Fusion for Sparsely-Supervised 3D Object Detection</b>
-      <br> CVPR, 2024
-      <br>
-      [<a href="https://openaccess.thecvf.com/content/CVPR2024/papers/Xia_HINTED_Hard_Instance_Enhanced_Detector_with_Mixed-Density_Feature_Fusion_for_CVPR_2024_paper.pdf" target="_blank">paper</a>]
-	  [<a href="https://github.com/xmuqimingxia/HINTED" target="_blank">code</a>]
-    </td>
-  </tr>
-  <tr>
-    <td class="pub_td1"> <img src="./imgs/COIN.jpg" class="papericon"></td>
-    <td class="pub_td2"><font color="goldenrod">Qiming xia</font>, Jinhao Deng, Chenglu Wen<sup>✉</sup>,  Hai Wu, Shaoshuai Shi, Xin Li, Cheng Wang
-      <br><b>CoIn: Contrastive instance feature mining for outdoor 3d object detection with very limited annotations</b>
-      <br> ICCV, 2023
-      <br>
-	  [<a href="https://openaccess.thecvf.com/content/ICCV2023/papers/Xia_CoIn_Contrastive_Instance_Feature_Mining_for_Outdoor_3D_Object_Detection_ICCV_2023_paper.pdf" target="_blank">paper</a>]
-	  [<a href="https://github.com/xmuqimingxia/CoIn" target="_blank">code</a>]
-    </td>
-  </tr>
-
-
-
-  </tbody>
-</table>
-
+<h3>Label-Efficient 3D Object Detection</h3>
+<p>I develop methods that reduce the need for manually annotated 3D bounding boxes in LiDAR data. I explore how sparse box labels, coarse clicks, and cues from point clouds and pretrained multimodal models can provide supervision for 3D detectors.</p>
+<ul>
+  <li><strong>SC3D</strong> (ISPRS JPRS 2026) uses one coarse click per LiDAR frame to generate box and mask supervision. <a href="https://doi.org/10.1016/j.isprsjprs.2026.02.025" aria-label="SC3D paper">[Paper]</a></li>
+  <li><strong>OWL</strong> (AAAI 2026) combines occupancy cues with large-model priors to train 3D detectors without manual labels. <a href="https://arxiv.org/abs/2512.05698" aria-label="OWL paper">[Paper]</a></li>
+  <li><strong>SP3D</strong> (CVPR 2025) uses cross-modal semantic prompts to generate pseudo-labels when annotations are scarce. <a href="https://openaccess.thecvf.com/content/CVPR2025/papers/Zhao_SP3D_Boosting_Sparsely-Supervised_3D_Object_Detection_via_Accurate_Cross-Modal_Semantic_CVPR_2025_paper.pdf" aria-label="SP3D paper">[Paper]</a> <a href="https://github.com/xmuqimingxia/SP3D" aria-label="SP3D code">[Code]</a></li>
+  <li><strong>HINTED</strong> (CVPR 2024) uses mixed-density feature fusion to help detect objects with sparse or incomplete LiDAR returns. <a href="https://openaccess.thecvf.com/content/CVPR2024/html/Xia_HINTED_Hard_Instance_Enhanced_Detector_with_Mixed-Density_Feature_Fusion_for_CVPR_2024_paper.html" aria-label="HINTED paper">[Paper]</a> <a href="https://github.com/xmuqimingxia/HINTED" aria-label="HINTED code">[Code]</a></li>
+  <li><strong>CoIn</strong> (ICCV 2023) uses contrastive learning to improve instance features and mine pseudo-labels from sparsely annotated point clouds. <a href="https://openaccess.thecvf.com/content/ICCV2023/papers/Xia_CoIn_Contrastive_Instance_Feature_Mining_for_Outdoor_3D_Object_Detection_ICCV_2023_paper.pdf" aria-label="CoIn paper">[Paper]</a> <a href="https://github.com/xmuqimingxia/CoIn" aria-label="CoIn code">[Code]</a></li>
+</ul>
 
 <h3>Collaborative Perception</h3>
-<table class="pub_table">
-  <tbody>
-  <tr>
-    <td class="pub_td1"> <img src="./imgs/3DHANET.jpg" class="papericon"></td>
-    <td class="pub_td2"> <font color="goldenrod">Qiming Xia</font>, Yidong Chen, Guorong Cai<sup>✉</sup>, Guikun Chen, Daoshun Xie, Jinhe Su, Zongyue Wang<sup>✉</sup>
-      <br><b>3-D HANet: A flexible 3-D heatmap auxiliary network for object detection</b>
-      <br>IEEE Transactions on Geoscience and Remote Sensing (IEEE TGRS)
-      <br>
-      [<a href="https://ieeexplore.ieee.org/abstract/document/10056279" target="_blank">paper</a>]
-	  [<a href="https://github.com/xmuqimingxia/3D-HANet" target="_blank">code</a>]
-    </td>
-    </tr>
-       
-	  
-       
+<p>I study how vehicles and roadside infrastructure can combine observations to detect objects beyond the view of a single vehicle. My work addresses learning from unlabeled multi-agent data, aligning observations when satellite positioning is unavailable, and fusing LiDAR and radar in adverse weather.</p>
+<ul>
+  <li><strong>DOtA++</strong> (IEEE TPAMI 2026) extends unsupervised collaborative detection by refining pseudo-labels with multimodal priors. <a href="https://doi.org/10.1109/TPAMI.2026.3664863" aria-label="DOtA++ paper">[Paper]</a> <a href="https://github.com/xmuqimingxia/DOtAv2" aria-label="DOtA++ and DOtA code">[Code]</a></li>
+  <li><strong>V2VLoc</strong> (AAAI 2026) uses LiDAR-based localization and spatiotemporal alignment for collaborative detection without GNSS. <a href="https://arxiv.org/abs/2511.14247" aria-label="V2VLoc paper">[Paper]</a></li>
+  <li><strong>DOtA</strong> (CVPR 2025) learns to detect objects from multi-agent LiDAR scans without manual annotations. <a href="https://openaccess.thecvf.com/content/CVPR2025/html/Xia_Learning_to_Detect_Objects_from__Multi-Agent_LiDAR_Scans_without_CVPR_2025_paper.html" aria-label="DOtA paper">[Paper]</a> <a href="https://github.com/xmuqimingxia/DOtAv2" aria-label="DOtA and DOtA++ code">[Code]</a></li>
+  <li><strong>V2X-R</strong> (CVPR 2025) combines LiDAR and 4D radar for collaborative detection in fog and snow. <a href="https://openaccess.thecvf.com/content/CVPR2025/html/Huang_V2X-R_Cooperative_LiDAR-4D_Radar_Fusion_with_Denoising_Diffusion_for_3D_CVPR_2025_paper.html" aria-label="V2X-R paper">[Paper]</a> <a href="https://github.com/ylwhxht/V2X-R" aria-label="V2X-R code">[Code]</a></li>
+</ul>
 
-    <tr>
-    <td class="pub_td1"> <img src="./imgs/3DMSSD.jpg" class="papericon"></td>
-    <td class="pub_td2">Zongyue Wang, <font color="goldenrod">Qiming Xia</font>, Jing Du, Shangfeng Huang, Jinhe Su, José Marcato Junior, Jonathan Li, Guorong Cai<sup>✉</sup>
-      <br><b>3D MSSD: A multilayer spatial structure 3D object detection network for mobile LiDAR point clouds</b>
-      <br>International Journal of Applied Earth Observation and Geoinformation (JAG)
-      <br>
-    </td>
-  </tr>   
-
-
-
-
-  </tbody>
-</table>
-
-
-
+<h3>Multimodal 3D Scene Understanding</h3>
+<p>I explore how models can link natural language to objects in dynamic 3D scenes. My recent work on outdoor 3D visual grounding studies how an object's motion across frames helps identify it from a description.</p>
+<ul>
+  <li><strong>MoT3DVG</strong> (NeurIPS 2026) introduces a benchmark for outdoor 3D visual grounding with motion descriptions and temporal cues. <a href="https://asc.xmu.edu.cn/newsInfo?id=87" aria-label="MoT3DVG overview from the ASC Lab">[Lab announcement]</a></li>
+</ul>
 
 <h2>Professional Activities<a name="activities"></a>&nbsp;&nbsp;&nbsp;<a style=" color:#9D849A; font-size:15px;" href="#top">[back top]</a></h2>
     <h3>Reviewer:</h3>
