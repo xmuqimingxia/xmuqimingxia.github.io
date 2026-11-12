@@ -1,128 +1,398 @@
-<!DOCTYPE html>
-<!-- saved from url=(0055)https://www.starlg.cn/TianliangZhang/TianliangZhang.htm -->
-<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-  <meta content="IE=5.0000" http-equiv="X-UA-Compatible">
-  <meta name="description" content="Tianliang Zhang&#39;s home page">
-
-  <link href="./imgs/tlzdoc.css" rel="stylesheet" type="text/css">
-  <title>Qiming Xia's Homepage--夏启明的个人主页</title>
-  <link rel="icon" href="./imgs/qmxia.jpg">
-  <meta name="GENERATOR" content="MSHTML 11.00.10570.1001">
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="夏启明的学术主页。研究方向包括计算机视觉、三维场景感知和空间认知。">
+  <meta name="theme-color" content="#263c51">
+  <title>夏启明 · 学术主页</title>
+  <style>
+    :root {
+      color-scheme: light;
+      --navy: #263c51;
+      --ink: #213141;
+      --muted: #4b6174;
+      --line: #d5dfe7;
+      --page: #e9eef2;
+      --paper: #fff;
+      --sans: "Inter", "Segoe UI", "PingFang SC", "Microsoft YaHei", sans-serif;
+      --serif: "Source Serif 4", Georgia, "Songti SC", "SimSun", serif;
+    }
+    *, *::before, *::after { box-sizing: border-box; }
+    html { scroll-padding-top: 1.25rem; }
+    body {
+      margin: 0;
+      background: var(--page);
+      color: var(--ink);
+      font: 16px/1.68 var(--sans);
+    }
+    a { color: inherit; text-underline-offset: 0.23em; }
+    a:hover { text-decoration-thickness: 2px; }
+    a:focus-visible { outline: 2px solid #317cc1; outline-offset: 4px; }
+    h1, h2, h3, p, ul, ol, dl, dd { margin: 0; }
+    .skip {
+      position: fixed;
+      top: .5rem;
+      left: .5rem;
+      z-index: 2;
+      transform: translateY(-150%);
+      padding: .55rem .8rem;
+      background: white;
+      color: var(--navy);
+    }
+    .skip:focus { transform: translateY(0); }
+    .site {
+      width: min(1160px, calc(100% - 3rem));
+      margin: 2.4rem auto;
+      box-shadow: 0 10px 44px #263c5110;
+    }
+    .overview {
+      display: grid;
+      grid-template-columns: minmax(15rem, 29%) minmax(0, 1fr);
+      background: var(--paper);
+    }
+    .profile {
+      min-width: 0;
+      padding: 3rem clamp(1.35rem, 3vw, 2.6rem);
+      background: var(--navy);
+      color: #dce7ef;
+      font-size: .92rem;
+    }
+    .identity { text-align: center; }
+    .portrait-line { display: flex; align-items: center; gap: .75rem; }
+    .portrait-line::before, .portrait-line::after {
+      content: "";
+      height: 1px;
+      background: #9cb2c8;
+      flex: 1;
+    }
+    .portrait {
+      position: relative;
+      flex: 0 0 clamp(6.75rem, 10.5vw, 8rem);
+      aspect-ratio: 1;
+      overflow: hidden;
+      border-radius: 50%;
+      outline: 1px solid #c3d4e3;
+      outline-offset: 5px;
+      background: #e9f0f6;
+    }
+    .portrait::before, .portrait::after {
+      content: "";
+      position: absolute;
+      left: 50%;
+      transform: translateX(-50%);
+      background: #a4b8cb;
+    }
+    .portrait::before {
+      top: 23%;
+      width: 31%;
+      aspect-ratio: 1;
+      border-radius: 50%;
+    }
+    .portrait::after {
+      top: 63%;
+      width: 79%;
+      height: 43%;
+      border-radius: 50% 50% 0 0 / 80% 80% 0 0;
+    }
+    .identity h1 {
+      margin-top: 1.3rem;
+      font-size: clamp(2.15rem, 4vw, 3rem);
+      font-weight: 700;
+      letter-spacing: .12em;
+      line-height: 1.2;
+      color: #fff;
+    }
+    .role { margin-top: .45rem; color: #e6eef5; }
+    .profile-section {
+      margin-top: 1.9rem;
+      padding-top: 1.15rem;
+      border-top: 1px solid #a6bdd15e;
+    }
+    .profile-section h2 {
+      margin-bottom: .55rem;
+      color: #fff;
+      font-size: .99rem;
+      letter-spacing: .08em;
+    }
+    .contacts {
+      display: grid;
+      grid-template-columns: max-content minmax(0, 1fr);
+      column-gap: .65rem;
+      row-gap: .34rem;
+      font-size: .88rem;
+    }
+    .contacts dt { color: #fff; font-weight: 600; }
+    .contacts dd { overflow-wrap: anywhere; }
+    .main {
+      min-width: 0;
+      padding: 2rem clamp(1.5rem, 5vw, 3.75rem) 2.65rem;
+    }
+    .page-nav {
+      display: flex;
+      flex-wrap: wrap;
+      column-gap: 1.25rem;
+      row-gap: .45rem;
+      margin-bottom: 1.75rem;
+      padding: 0 0 .85rem;
+      border-bottom: 1px solid var(--line);
+      color: var(--muted);
+      font-size: .86rem;
+    }
+    .page-nav a { text-decoration: none; }
+    .page-nav a:hover, .page-nav a:focus-visible { text-decoration: underline; }
+    .page-nav .full-list { margin-left: auto; color: var(--navy); font-weight: 650; }
+    .main section + section { margin-top: 1.65rem; }
+    .section-heading {
+      display: flex;
+      gap: .85rem;
+      align-items: center;
+      margin-bottom: .8rem;
+      color: var(--navy);
+      font-size: 1.25rem;
+      line-height: 1.35;
+      letter-spacing: .04em;
+    }
+    .section-heading::after {
+      content: "";
+      flex: 1;
+      height: 1px;
+      background: var(--line);
+    }
+    .selected-papers, .entries { padding: 0; list-style: none; }
+    .selected-paper + .selected-paper { margin-top: .7rem; }
+    .selected-paper {
+      padding-left: .8rem;
+      border-left: 2px solid #c6d6e4;
+      overflow-wrap: anywhere;
+      font-size: .9rem;
+      line-height: 1.62;
+    }
+    .selected-paper strong, .paper-list strong { color: var(--ink); }
+    .venue { font-weight: 650; color: var(--navy); }
+    .entries li + li { margin-top: .72rem; }
+    .entry-header {
+      display: grid;
+      grid-template-columns: minmax(8.8rem, auto) minmax(0, 1fr) minmax(0, auto);
+      gap: .25rem .85rem;
+      align-items: baseline;
+      font-size: .91rem;
+    }
+    .entry-header h3 { font-size: .96rem; line-height: 1.4; }
+    .entry-date { color: var(--muted); font-variant-numeric: tabular-nums; white-space: nowrap; }
+    .entry-role { color: var(--muted); text-align: right; }
+    .entry-points {
+      margin-top: .35rem;
+      padding-left: 1.05rem;
+      font-size: .91rem;
+      line-height: 1.65;
+    }
+    .entry-points li + li { margin-top: .25rem; }
+    .appendix {
+      padding: clamp(1.5rem, 5vw, 3.5rem);
+      border-top: 1px solid var(--line);
+      background: var(--paper);
+    }
+    .appendix-header {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: baseline;
+      justify-content: space-between;
+      gap: .45rem 1.25rem;
+      padding-bottom: .85rem;
+      border-bottom: 1px solid var(--line);
+    }
+    .appendix h2 {
+      border-left: .26rem solid var(--navy);
+      padding-left: .7rem;
+      font-size: clamp(1.15rem, 3vw, 1.5rem);
+      line-height: 1.4;
+      color: var(--navy);
+    }
+    .legend { color: var(--muted); font-size: .83rem; }
+    .legend span + span { margin-left: .65rem; }
+    .author-mark { margin-inline: .13em; color: var(--navy); }
+    .paper-list {
+      margin-top: 1.1rem;
+      padding-left: 1.6rem;
+      font-size: .91rem;
+      line-height: 1.65;
+    }
+    .paper-list li { padding-left: .35rem; overflow-wrap: anywhere; }
+    .paper-list li + li { margin-top: .8rem; }
+    .paper-list li::marker { font-weight: 700; color: var(--navy); }
+    .footer {
+      margin-top: 1.5rem;
+      padding-top: .85rem;
+      border-top: 1px solid var(--line);
+      text-align: right;
+      color: var(--muted);
+      font-size: .85rem;
+    }
+    @media (max-width: 850px) {
+      .site { width: calc(100% - 1.5rem); margin: .75rem auto; }
+      .profile { padding: 2.5rem 1.35rem; }
+      .main { padding: 1.55rem 1.35rem 2rem; }
+      .page-nav { column-gap: .75rem; }
+      .page-nav .full-list { margin-left: 0; }
+      .entry-header { grid-template-columns: minmax(0, 1fr) auto; }
+      .entry-date { grid-column: 2; grid-row: 1; }
+      .entry-role { grid-column: 1 / -1; text-align: left; }
+    }
+    @media (max-width: 630px) {
+      .site { width: 100%; margin: 0; box-shadow: none; }
+      .overview { grid-template-columns: minmax(0, 1fr); }
+      .portrait-line { max-width: 16rem; margin-inline: auto; }
+      .profile { padding: 2.2rem 1.25rem 1.75rem; }
+      .profile-section { margin-top: 1.2rem; padding-top: .9rem; }
+      .main, .appendix { padding-inline: 1.25rem; }
+      .page-nav { gap: .5rem .9rem; }
+    }
+    @media print {
+      @page { size: A4; margin: 13mm; }
+      body { background: #fff; font-size: 10pt; print-color-adjust: exact; }
+      .site { width: auto; margin: 0; box-shadow: none; }
+      .overview { grid-template-columns: 31% minmax(0, 1fr); }
+      .profile { padding: 1.25rem .85rem; font-size: .77rem; }
+      .profile-section { margin-top: .85rem; padding-top: .6rem; }
+      .contacts { font-size: .72rem; }
+      .portrait { flex-basis: 5.5rem; }
+      .identity h1 { font-size: 1.8rem; }
+      .main, .appendix { padding: .8rem 1rem; }
+      .page-nav, .footer, .skip { display: none; }
+      .section-heading { font-size: 1rem; margin-bottom: .5rem; }
+      .main section + section { margin-top: .75rem; }
+      .selected-paper, .entry-header, .entry-points, .paper-list { font-size: .75rem; }
+      .selected-paper + .selected-paper, .entries li + li { margin-top: .32rem; }
+      .entry-header { grid-template-columns: auto minmax(0, 1fr) auto; gap: .3rem; }
+      .entry-date, .entry-role { grid-area: auto; }
+      .entry-role { text-align: right; }
+      .appendix { break-before: page; border: 0; padding-inline: 0; }
+      .paper-list li { break-inside: avoid; }
+    }
+  </style>
 </head>
-
-
-<body>
-  <div id="layout-content" style="margin-top: 25px;">
-  <table>
-    <tbody>
-    <tr>
-      <td>
-        <img width="160" src="./imgs/qmxia.jpg" border="3">
-      </td>	
-      <td width="670">
-        <div id="toptitle">
-        <h1>Qiming Xia &nbsp; 夏启明<a name="top"></a></h1>
-		</div>
-        <h3>Postdoctoral Fellow at The Hong Kong Polytechnic University</h3>
-        <p>
-        <br> Email:
-        <a href="xiaqiming@stu.xmu.edu.cn">xiaqiming@stu.xmu.edu.cn</a>		
-        <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-	&nbsp;&nbsp;<a href="https://github.com/xmuqimingxia" target="_blank">[Github]</a>
-	&nbsp;&nbsp;<a href="https://scholar.google.com/citations?hl=zh-CN&user=A6spPv_n5qUC&view_op=list_works&sortby=pubdate" target="_blank">[Scholar]</a>	
-  <!--      &nbsp;&nbsp;<a href="#" target="_blank">[Ph.D. Thesis, in Chinese]</a>		-->
-        <br><br></p>
-      </td>
-    </tr>
-    <tr></tr></tbody>
-  </table>
-  <div id="layout-content" style="margin-top: 25px;">
-
-
-<h4>[<a style=" color:#9D849A;" href="#biography">Biography</a>] [<a style=" color:#9D849A;" href="#news">Latest News</a>] [<a style=" color:#9D849A;" href="#Research Interests">Research Interests</a>] 
-[<a style=" color:#9D849A;" href="#activities">Professional Activities</a>] [<a style=" color:#9D849A;" href="#awards">Major Awards</a>]</h4>
-
-
-<h2>Biography<a name="biography"></a>&nbsp;&nbsp;&nbsp;<a style=" color:#9D849A; font-size:15px;" href="#top">[back top]</a></h2>
-  <p style="text-indent:2em;"> I earned my Ph.D. from the School of Informatics at Xiamen University, China. My research interests focus on computer vision and machine learning, particularly in exploring machine learning for autonomous systems. This includes 3D scene understanding, object detection, and other topics related to autonomous driving. Served as Chair of the Student Working Group at the Xiamen Member Activity Center of the China Society of Image and Graphics; recipient of the Outstanding Young Paper Award and the Second Prize in a data processing competition at the National LiDAR Conference.
-  </p>
-
-
-<h2>Latest News<a name="news"></a>&nbsp;&nbsp;&nbsp;<a style=" color:#9D849A; font-size:15px;" href="#top">[back top]</a></h2>
-<ul>  
-  <li> 10/2026: MoT3DVG (<font color="goldenrod"> Corresponding Author</font>) is accepted by NeurIPS 2026 </li>
-  <li> 02/2026: DoTA++ (<font color="goldenrod">First Author</font>) is accepted by IEEE TPAMI </li>
-  <li> 02/2026: SC3D (<font color="goldenrod">First Author</font>) is accepted by ISPRS </li>
-  <li> 11/2025: V2VLoc (<font color="goldenrod">Co-First Author</font>) and OWL (<font color="goldenrod">Co-First Author</font>) are accepted by AAAI 2026 </li>
-  <li> 02/2025: DoTA(<font color="goldenrod">First Author</font>), SP3D(<font color="goldenrod">Co-First Author</font>) and V2X-R are accepted by CVPR 2025 </li>		
-  <li> 02/2024: HINTED(<font color="goldenrod">First Author</font>) is accepted by CVPR 2024 </li>	
-  <li> 08/2023: CoIn(<font color="goldenrod">First Author</font>) is accepted by ICCV 2023 </li>	
-  <li> 02/2023: 3D HANET(<font color="goldenrod">First Author</font>) is accepted by TGRS </li>
-</ul>
-
-
-<h2>Research Interests<a name="Research Interests"></a>&nbsp;&nbsp;&nbsp;<a style=" color:#9D849A; font-size:15px;" href="#top">[back top]</a></h2>
-
-<p>I study how autonomous systems can learn to perceive and understand outdoor 3D scenes with fewer human annotations, observations shared across vehicles and infrastructure, and natural language descriptions.</p>
-
-<h3>Label-Efficient 3D Object Detection</h3>
-<p>I develop methods that reduce the need for manually annotated 3D bounding boxes in LiDAR data. I explore how sparse box labels, coarse clicks, and cues from point clouds and pretrained multimodal models can provide supervision for 3D detectors.</p>
-<ul>
-  <li><strong>SC3D</strong> (ISPRS JPRS 2026) uses one coarse click per LiDAR frame to generate box and mask supervision. <a href="https://doi.org/10.1016/j.isprsjprs.2026.02.025" aria-label="SC3D paper">[Paper]</a></li>
-  <li><strong>OWL</strong> (AAAI 2026) combines occupancy cues with large-model priors to train 3D detectors without manual labels. <a href="https://arxiv.org/abs/2512.05698" aria-label="OWL paper">[Paper]</a></li>
-  <li><strong>SP3D</strong> (CVPR 2025) uses cross-modal semantic prompts to generate pseudo-labels when annotations are scarce. <a href="https://openaccess.thecvf.com/content/CVPR2025/papers/Zhao_SP3D_Boosting_Sparsely-Supervised_3D_Object_Detection_via_Accurate_Cross-Modal_Semantic_CVPR_2025_paper.pdf" aria-label="SP3D paper">[Paper]</a> <a href="https://github.com/xmuqimingxia/SP3D" aria-label="SP3D code">[Code]</a></li>
-  <li><strong>HINTED</strong> (CVPR 2024) uses mixed-density feature fusion to help detect objects with sparse or incomplete LiDAR returns. <a href="https://openaccess.thecvf.com/content/CVPR2024/html/Xia_HINTED_Hard_Instance_Enhanced_Detector_with_Mixed-Density_Feature_Fusion_for_CVPR_2024_paper.html" aria-label="HINTED paper">[Paper]</a> <a href="https://github.com/xmuqimingxia/HINTED" aria-label="HINTED code">[Code]</a></li>
-  <li><strong>CoIn</strong> (ICCV 2023) uses contrastive learning to improve instance features and mine pseudo-labels from sparsely annotated point clouds. <a href="https://openaccess.thecvf.com/content/ICCV2023/papers/Xia_CoIn_Contrastive_Instance_Feature_Mining_for_Outdoor_3D_Object_Detection_ICCV_2023_paper.pdf" aria-label="CoIn paper">[Paper]</a> <a href="https://github.com/xmuqimingxia/CoIn" aria-label="CoIn code">[Code]</a></li>
-</ul>
-
-<h3>Collaborative Perception</h3>
-<p>I study how vehicles and roadside infrastructure can combine observations to detect objects beyond the view of a single vehicle. My work addresses learning from unlabeled multi-agent data, aligning observations when satellite positioning is unavailable, and fusing LiDAR and radar in adverse weather.</p>
-<ul>
-  <li><strong>DOtA++</strong> (IEEE TPAMI 2026) extends unsupervised collaborative detection by refining pseudo-labels with multimodal priors. <a href="https://doi.org/10.1109/TPAMI.2026.3664863" aria-label="DOtA++ paper">[Paper]</a> <a href="https://github.com/xmuqimingxia/DOtAv2" aria-label="DOtA++ and DOtA code">[Code]</a></li>
-  <li><strong>V2VLoc</strong> (AAAI 2026) uses LiDAR-based localization and spatiotemporal alignment for collaborative detection without GNSS. <a href="https://arxiv.org/abs/2511.14247" aria-label="V2VLoc paper">[Paper]</a></li>
-  <li><strong>DOtA</strong> (CVPR 2025) learns to detect objects from multi-agent LiDAR scans without manual annotations. <a href="https://openaccess.thecvf.com/content/CVPR2025/html/Xia_Learning_to_Detect_Objects_from__Multi-Agent_LiDAR_Scans_without_CVPR_2025_paper.html" aria-label="DOtA paper">[Paper]</a> <a href="https://github.com/xmuqimingxia/DOtAv2" aria-label="DOtA and DOtA++ code">[Code]</a></li>
-  <li><strong>V2X-R</strong> (CVPR 2025) combines LiDAR and 4D radar for collaborative detection in fog and snow. <a href="https://openaccess.thecvf.com/content/CVPR2025/html/Huang_V2X-R_Cooperative_LiDAR-4D_Radar_Fusion_with_Denoising_Diffusion_for_3D_CVPR_2025_paper.html" aria-label="V2X-R paper">[Paper]</a> <a href="https://github.com/ylwhxht/V2X-R" aria-label="V2X-R code">[Code]</a></li>
-</ul>
-
-<h3>Multimodal 3D Scene Understanding</h3>
-<p>I explore how models can link natural language to objects in dynamic 3D scenes. My recent work on outdoor 3D visual grounding studies how an object's motion across frames helps identify it from a description.</p>
-<ul>
-  <li><strong>MoT3DVG</strong> (NeurIPS 2026) introduces a benchmark for outdoor 3D visual grounding with motion descriptions and temporal cues. <a href="https://asc.xmu.edu.cn/newsInfo?id=87" aria-label="MoT3DVG overview from the ASC Lab">[Lab announcement]</a></li>
-</ul>
-
-<h2>Professional Activities<a name="activities"></a>&nbsp;&nbsp;&nbsp;<a style=" color:#9D849A; font-size:15px;" href="#top">[back top]</a></h2>
-    <h3>Reviewer:</h3>
-<ul>
-  <li> Conference and Workshop on Neural Information Processing Systems (NeurIPS)</li>
-  <li> The International Conference on Learning Representations (ICLR)</li>
-  <li> International Conference on Machine Learning(ICML)</li>
-  <li> Conference on Computer Vision and Pattern Recognition(CVPR)</li>
-  <li> International Conference on Computer Vision (ICCV)</li>
-  <li> IEEE Transactions on Geoscience and Remote Sensing (TGRS)</li>
-  <li> IEEE Transactions on Intelligent Transportation Systems (TITS)</li>
-</ul>
-
-<h2>Major Awards<a name="awards"></a>&nbsp;&nbsp;&nbsp;<a style=" color:#9D849A; font-size:15px;" href="#top">[back top]</a></h2>
-<ul>
-    <li>  National Scholarship, China, 2020  </li>
-</ul>
-
-<table border="0" id="table2" width="900">
-<tbody>
-   <tr>
-      <td width="180">
-        <script type="text/javascript" id="clstr_globe" src="//clustrmaps.com/globe.js?cl=1daeff&amp;w=160&amp;t=tt&amp;d=lu2aCMrgo7pZHy1HbmZHo21Lg4BollvBa-5InOmXGsk&amp;ct=858585&amp;co=ffffff&amp;cmn=1bff1b"></script>
-      </td>
-      <td width="0">
-         <font face="Arial" size="6"><b><span lang="zh-cn">不以物喜，不以己悲。 </span></b></font>
-            <p><font face="Arial" size="4">Do not rejoice in external gains, nor be saddened by personal losses. </font></p >
-      </td>
-   </tr>
-</tbody>
-</table>
-
-
-</div>
-</div>
+<body id="top">
+  <a class="skip" href="#main-content">跳到主要内容</a>
+  <div class="site">
+    <div class="overview">
+      <aside class="profile" aria-label="个人资料">
+        <header class="identity">
+          <div class="portrait-line" aria-hidden="true">
+            <div class="portrait"></div>
+          </div>
+          <h1>夏启明</h1>
+          <p class="role">香港理工大学博士后</p>
+        </header>
+        <section class="profile-section" id="bio">
+          <h2>个人简介</h2>
+          <p>研究方向为计算机视觉和机器学习。聚焦于探索机器学习在自主无人系统中的应用，涵盖三维场景目标感知、端到端自动驾驶以及三维空间智能处理相关的其他课题。曾担任中国图象图形学学会厦门会员活动中心学生工作组主席；曾获得全国激光雷达大会“优秀青年论文奖”，数据智能处理竞赛二等奖，研究生国家奖学金等奖项。以第一/通讯作者发表CCF-A类/SCI一区论文十余篇。</p>
+        </section>
+        <section class="profile-section">
+          <h2>基本信息</h2>
+          <dl class="contacts">
+            <dt>城市</dt><dd>香港</dd>
+            <dt>电话</dt><dd><a href="tel:18712150151">18712150151</a></dd>
+            <dt>邮箱</dt><dd><a href="mailto:qimingxia96@163.com">qimingxia96@163.com</a></dd>
+            <dt>主页</dt><dd><a href="https://xmuqimingxia.github.io/">xmuqimingxia.github.io</a></dd>
+          </dl>
+        </section>
+        <section class="profile-section">
+          <h2>兴趣爱好</h2>
+          <p>城市漫步、摄影、阅读</p>
+        </section>
+      </aside>
+      <main class="main" id="main-content" tabindex="-1">
+        <nav class="page-nav" aria-label="页面导航">
+          <a href="#bio">简介</a>
+          <a href="#selected">代表性论文</a>
+          <a href="#projects">项目经历</a>
+          <a href="#education">教育背景</a>
+          <a href="#publications" class="full-list">完整论文列表 ↓</a>
+        </nav>
+        <section id="selected">
+          <h2 class="section-heading">代表性论文</h2>
+          <ul class="selected-papers" lang="en">
+            <li class="selected-paper"><strong>Xia Q.</strong>, Zheng L., Zhao S., Huang X., Wu H., Wen C.*, and Wang C. DOtA++: Unsupervisely and Collaboratively Detect Objects from Multi-Agent LiDAR Scans with Composite Prior Constraints [J]// IEEE Transactions on Pattern Analysis and Machine Intelligence.2026 <span class="venue">(IEEE TPAMI, CCF-A)</span></li>
+            <li class="selected-paper"><strong>Xia Q.</strong>, Lin H., Ye Wei., Luo Y., Zhao S., Wu H., Wen C.*, and Wang C. Label-Efficient Outdoor 3D Object Detection via Single Click Annotation from LiDAR Point Cloud. [J]// ISPRS journal of photogrammetry and remote sensing.2026 <span class="venue">(ISPRS, SCI-Q1)</span></li>
+            <li class="selected-paper"><strong>Xia Q.</strong>, Lin W., Xiang H., Huang X., Chen S., Dong Z., Wang C., and Wen C.*. Learning to Detect Objects from Multi-Agent LiDAR Scans without Manual Labels [C]//Proceedings of the Computer Vision and Pattern Recognition Conference. 2025: 1418-1428. <span class="venue">(CVPR 2025, CCF-A)</span></li>
+            <li class="selected-paper"><strong>Xia Q.</strong>, Ye W., Wu H., Zhao S., Xing L., Huang X., Deng J., Li X., Wen C.*, and Wang C. HINTED: Hard instance enhanced detector with mixed-density feature fusion for sparsely-supervised 3d object detection [C]//Proceedings of the Computer Vision and Pattern Recognition Conference. 2024: 15321-15330. <span class="venue">(CVPR 2024, CCF-A)</span></li>
+            <li class="selected-paper"><strong>Xia Q.</strong>, Deng J., Wen C.*, Wu H., Shi S., Li X., and Wang C. CoIn: Contrastive instance feature mining for outdoor 3d object detection with very limited annotations [C]//Proceedings of the IEEE/CVF International Conference on Computer Vision. 2023: 6254-6263. <span class="venue">(ICCV 2023, CCF-A)</span></li>
+          </ul>
+        </section>
+        <section id="projects">
+          <h2 class="section-heading">项目经历</h2>
+          <ul class="entries">
+            <li>
+              <div class="entry-header">
+                <span class="entry-date">2026.07 – 至今</span>
+                <h3>香港理工大学</h3>
+                <span class="entry-role">三维空间认知</span>
+              </div>
+              <ul class="entry-points">
+                <li>探索如何结合局部物体特征与整体场景布局，为复杂环境中的目标定位和空间关系推理提供算法支持。</li>
+              </ul>
+            </li>
+            <li>
+              <div class="entry-header">
+                <span class="entry-date">2022.09 – 2026.6</span>
+                <h3>厦门大学</h3>
+                <span class="entry-role">三维空间感知</span>
+              </div>
+              <ul class="entry-points">
+                <li>开展基于弱标签的3D场景感知算法研究。开发一系列弱监督3D目标检测方法，在仅需2%标注成本的条件下，实现全监督检测算法90%的性能。</li>
+                <li>开发物理仿真恶劣天候数据生成方法、多模态多任务学习方法，大幅度提升感知算法在恶劣天候下的性能。</li>
+              </ul>
+            </li>
+          </ul>
+        </section>
+        <section id="education">
+          <h2 class="section-heading">教育背景</h2>
+          <ul class="entries">
+            <li>
+              <div class="entry-header">
+                <span class="entry-date">2022.09 – 2026.06</span>
+                <h3>厦门大学</h3>
+                <span class="entry-role">计算机科学与技术 · 工学博士</span>
+              </div>
+            </li>
+            <li>
+              <div class="entry-header">
+                <span class="entry-date">2019.09 – 2022.06</span>
+                <h3>集美大学</h3>
+                <span class="entry-role">信息与通信工程 · 工学硕士</span>
+              </div>
+            </li>
+            <li>
+              <div class="entry-header">
+                <span class="entry-date">2014.09 – 2018.06</span>
+                <h3>东华理工大学</h3>
+                <span class="entry-role">通信工程 · 工学学士</span>
+              </div>
+            </li>
+          </ul>
+        </section>
+      </main>
+    </div>
+    <section class="appendix" id="publications">
+      <header class="appendix-header">
+        <h2>附录：完整一作（共一）/ 通讯论文</h2>
+        <p class="legend"><span>✉ 通讯作者</span><span>† 共同第一作者</span></p>
+      </header>
+      <ol class="paper-list" lang="en">
+            <li>Zhao S., Guo X., <strong>Xia Q.</strong><sup class="author-mark" title="Corresponding author">✉</sup>, Huang X., Xiong K., Liu Z., and Wen C.<sup class="author-mark" title="Corresponding author">✉</sup>. MoT3DVG: A Benchmark for Outdoor 3D Visual Grounding with Motion-Aware Descriptions and Temporal Cues. In Advances in Neural Information Processing Systems. <span class="venue">(NeurIPS 2026, CCF-A)</span>.</li>
+            <li><strong>Xia Q.</strong>, Zheng L., Zhao S., Huang X., Wu H., Wen C.<sup class="author-mark" title="Corresponding author">✉</sup>, and Wang C. DOtA++: Unsupervisely and Collaboratively Detect Objects from Multi-Agent LiDAR Scans with Composite Prior Constraints [J]// IEEE Transactions on Pattern Analysis and Machine Intelligence.2026 <span class="venue">(IEEE TPAMI, CCF-A)</span>.</li>
+            <li><strong>Xia Q.</strong>, Lin W., Xiang H., Huang X., Chen S., Dong Z., Wang C., and Wen C.<sup class="author-mark" title="Corresponding author">✉</sup>. Learning to Detect Objects from Multi-Agent LiDAR Scans without Manual Labels [C]//Proceedings of the Computer Vision and Pattern Recognition Conference. 2025: 1418-1428. <span class="venue">(CVPR 2025, CCF-A)</span>.</li>
+            <li><strong>Xia Q.</strong>, Ye W., Wu H., Zhao S., Xing L., Huang X., Deng J., Li X., Wen C.<sup class="author-mark" title="Corresponding author">✉</sup>, and Wang C. HINTED: Hard instance enhanced detector with mixed-density feature fusion for sparsely-supervised 3d object detection [C]//Proceedings of the Computer Vision and Pattern Recognition Conference. 2024: 15321-15330. <span class="venue">(CVPR 2024, CCF-A)</span></li>
+            <li><strong>Xia Q.</strong>, Deng J., Wen C.<sup class="author-mark" title="Corresponding author">✉</sup>, Wu H., Shi S., Li X., and Wang C. CoIn: Contrastive instance feature mining for outdoor 3d object detection with very limited annotations [C]//Proceedings of the IEEE/CVF International Conference on Computer Vision. 2023: 6254-6263. <span class="venue">(ICCV 2023, CCF-A)</span></li>
+            <li><strong>Xia Q.</strong>, Lin H., Ye Wei., Luo Y., Zhao S., Wu H., Wen C.<sup class="author-mark" title="Corresponding author">✉</sup>, and Wang C. Label-Efficient Outdoor 3D Object Detection via Single Click Annotation from LiDAR Point Cloud. [J]// ISPRS journal of photogrammetry and remote sensing.2026 <span class="venue">(ISPRS, SCI-Q1)</span></li>
+            <li><strong>Xia Q.</strong><sup class="author-mark" title="Equal contribution">†</sup>, Chen Y.<sup class="author-mark" title="Equal contribution">†</sup>, Cai G., Chen G., Xie D., Su J., and Wang Z.<sup class="author-mark" title="Corresponding author">✉</sup>. 3-DHANet: A flexible 3D heatmap auxiliary network for object detection [J] //IEEE Transactions on Geoscience and Remote Sensing. 2023: 61:1-13. <span class="venue">(IEEE TGRS, SCI-Q1)</span></li>
+            <li>Zhao S.<sup class="author-mark" title="Equal contribution">†</sup>, <strong>Xia Q.</strong><sup class="author-mark" title="Equal contribution">†</sup>, Guo X., Zou P., Zheng M., Wu H., Wen C.<sup class="author-mark" title="Corresponding author">✉</sup>, and Wang, C. SP3D: Boosting Sparsely-Supervised 3D Object Detection via Accurate Cross-Modal Semantic Prompts [C]//Proceedings of the Computer Vision and Pattern Recognition Conference. 2025: 29374-29384. <span class="venue">(CVPR 2025, Highlight, Co-first Author, CCF-A)</span></li>
+            <li>Lin W.<sup class="author-mark" title="Equal contribution">†</sup>, <strong>Xia Q.</strong><sup class="author-mark" title="Equal contribution">†</sup>, Li W., Huang X., and Wen C.<sup class="author-mark" title="Corresponding author">✉</sup>. V2VLoc: Robust GNSS-Free Collaborative Perception via LiDAR Localization [C] //Proceedings of the AAAI Conference on Artificial Intelligence. <span class="venue">(AAAI 2026, Co-first Author, CCF-A)</span></li>
+            <li>Zheng L.<sup class="author-mark" title="Equal contribution">†</sup>, <strong>Xia Q.</strong><sup class="author-mark" title="Equal contribution">†</sup>, Chen X., Liu Z., and Wen C.<sup class="author-mark" title="Corresponding author">✉</sup>. WinMamba: Multi-Scale Shifted Windows in State Space Model for 3D Object Detection [C] //Proceedings of the AAAI Conference on Artificial Intelligence. <span class="venue">(AAAI 2026, Co-first Author, CCF-A)</span>.</li>
+      </ol>
+      <footer class="footer"><a href="#top">返回顶部 ↑</a></footer>
+    </section>
+  </div>
 </body>
 </html>
