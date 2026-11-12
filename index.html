@@ -229,6 +229,19 @@
       color: var(--muted);
       font-size: .85rem;
     }
+    .portrait-photo::before,
+.portrait-photo::after {
+  content: none;
+}
+
+.portrait-photo img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transform: scale(var(--photo-scale, 1));
+}
     @media (max-width: 850px) {
       .site { width: calc(100% - 1.5rem); margin: .75rem auto; }
       .profile { padding: 2.5rem 1.35rem; }
@@ -279,11 +292,10 @@
       <aside class="profile" aria-label="个人资料">
         <header class="identity">
           <div class="portrait-line">
-          <img class="portrait"
-           src="imgs/xqm.jpg"
-           alt="夏启明的头像"
-            style="width: clamp(6.75rem, 10.5vw, 8rem); min-width: 0; object-fit: cover;">
-        </div>
+  <div class="portrait portrait-photo" style="--photo-scale: 1.15;">
+    <img src="imgs/qmxia.jpg" alt="夏启明的头像">
+  </div>
+</div>
             
           <h1>夏启明</h1>
           <p class="role">香港理工大学博士后</p>
